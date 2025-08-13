@@ -54,6 +54,30 @@ header {
     border-radius: 4px;
     cursor: pointer;
 }
+#content {
+    background-image: url('/images/ocean.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    filter: brightness(80%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 300px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+#content p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 40px;
+}
 
 
 
