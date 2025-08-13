@@ -1,0 +1,31 @@
+#content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+}
+.team-member {
+    height: 200px;
+    width: 180px;
+}
+#content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#content ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    margin-right: 30px;
+}
+.title {
+    margin-top: 20px;;
+}
+
+
+
