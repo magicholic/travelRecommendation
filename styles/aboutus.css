@@ -32,51 +32,56 @@ header {
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
-#searchBar {
-    float: right;
-    width: 400px;
-    height: 50px;
-    padding: 10px;
-}
-#searchBar input[type="text"] {
-    width: 200px;
-    height: 30px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-#searchBar button {
-    height: 30px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
 #content {
-    background-image: url('/images/ocean.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/ocean.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    filter: brightness(80%);
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    padding-top: 300px;
+    padding-top: 200px;
     padding-left: 200px;
     padding-right: 200px;
 }
 #content h1 {
     font-size: 4rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
-#content p {
+#content > p {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 40px;
+}
+#content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+}
+.team-member {
+    height: 200px;
+    width: 180px;
+}
+#content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#content ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    margin-right: 30px;
+}
+.title {
+    margin-top: 20px;;
 }
 
 
