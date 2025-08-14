@@ -59,7 +59,7 @@ function appendElement(name, description, imageUrl, elementId) {
         itemDiv.className = 'result-item';
         itemDiv.innerHTML = `
             <div class="item-image">
-                <img src="${imageUrl}" alt="${name}" />
+                <img src="./images/${imageUrl}" alt="${name}" />
             </div>
             <div.item-description>
                 <h2>${name}</h2>
