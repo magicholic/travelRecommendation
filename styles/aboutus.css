@@ -4,10 +4,6 @@
     text-align: left;
     margin-top: 20px;
 }
-.team-member {
-    height: 200px;
-    width: 180px;
-}
 #content ul {
     list-style-type: none;
     padding: 0;
@@ -19,12 +15,21 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
     display: inline-block;
     margin-right: 30px;
 }
+.team-member {
+    height: 150px;
+    width: 200px;
+}
+.name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 .title {
     margin-top: 20px;;
+    font-size: 1.1rem;
 }
 
 
