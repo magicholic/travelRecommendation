@@ -10,6 +10,12 @@ searchBtnElement.addEventListener('click', function() {
     getData(searchInput);
 })
 
+const resetBtnElement = document.getElementById('resetBtn');
+resetBtnElement.addEventListener('click', function() {
+    document.getElementById('searchBarField').value = '';
+    document.getElementById('results').innerHTML = '';
+})
+
 async function getData(searchString) {
     let jsonFile = './travel_recommendation_api.json';
     let itemKeywords = [];
