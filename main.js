@@ -27,51 +27,48 @@ async function getData(searchString) {
             alert('No matching items found.');
             return;
         }
+        let resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = ''; // Clear previous results
+        let ulElement = document.createElement('ul');
+        ulElement.className = 'resultsList';
         for (let foundItem of foundList) {
             let info = result[foundItem];
             if (foundItem === 'countries') {
                 for (let countryItem of info) {
-                    buildInfo(countryItem.cities);
+                    buildInfo(countryItem.cities, ulElement);
                 }
             } else {
-                buildInfo(info);
+                buildInfo(info, ulElement);
             }
         }
-
+        resultsContainer.appendChild(ulElement);
     } catch (error) {
         console.error('Error reading file:', error);
         return;
     }
 }
 
-function buildInfo(info) {
+function buildInfo(info, ulElement) {
     for (let item of info) {
         let name = item.name;
         let description = item.description;
         let imageUrl = item.imageUrl;
-        appendElement(name, description, imageUrl, 'results');
+        appendElement(name, description, imageUrl, ulElement);
     }
 }
 
-function appendElement(name, description, imageUrl, elementId) {
-    // Create a new div element for the item
-        let itemDiv = document.createElement('div');
+function appendElement(name, description, imageUrl, ulElement) {
+        let itemDiv = document.createElement('li');
         itemDiv.className = 'result-item';
         itemDiv.innerHTML = `
             <div class="item-image">
-                <img src="./images/${imageUrl}" alt="${name}" />
+                <img width=370 height=250 src="./images/${imageUrl}" alt="${name}" />
             </div>
-            <div.item-description>
+            <div class="item-description">
                 <h2>${name}</h2>
                 <p>${description}</p>
             </div>
+            <button>Add to Favorites</button>
         `;
-        // Append the item div to the results container
-        let resultsContainer = document.getElementById(elementId);
-        if (!resultsContainer) {
-            console.error('Results container not found');
-            return;
-        }
-        resultsContainer.appendChild(itemDiv);
-
+        ulElement.appendChild(itemDiv);
 }
