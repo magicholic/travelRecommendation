@@ -55,7 +55,7 @@ header {
     cursor: pointer;
 }
 #content {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/travelRecommendation/images/ocean.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/ocean.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
